@@ -1,7 +1,7 @@
 "use client";
-
+import { NextUIProvider } from "@nextui-org/react";
 import React from "react";
-
+import { ThemeProvider } from "./providers/nexttheme";
 import "@rainbow-me/rainbowkit/styles.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import type { AppProps } from "next/app";
@@ -19,15 +19,13 @@ import {
   Locale,
 } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { optimismGoerli } from "wagmi/chains";
+import { polygon } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
-    optimismGoerli,
+    polygon,
 
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true"
-      ? [optimismGoerli]
-      : []),
+    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [polygon] : []),
   ],
   [publicProvider()]
 );
@@ -66,7 +64,11 @@ export default function Provider({ children }: { children: React.ReactNode }) {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains} appInfo={demoAppInfo}>
-        {mounted && children}
+        <NextUIProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {mounted && children}
+          </ThemeProvider>
+        </NextUIProvider>
       </RainbowKitProvider>
     </WagmiConfig>
   );
