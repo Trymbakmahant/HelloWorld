@@ -81,9 +81,8 @@ function Waku() {
   return (
     <>
       <div className="absolute w-full h-full">
-        {" "}
         <div className="border-solid flex flex-row border-2 border-blue-500 w-full h-[100vh]">
-          <div className="w-[400px] border-solid border-blue-500 border-2 h-full">
+          <div className="w-[400px] border-solid border-blue-500 border-2 ">
             <GroupList />
           </div>
           <div className="border-solid flex justify-end flex-col w-full border-blue-500 border-2 h-full">
