@@ -49,34 +49,32 @@ function ProfileData({ userId }: { userId: string }) {
     const result = JSON.stringify(data.Domains);
     console.log(result);
     return (
-      <div className="border-solid border-2 border-sky-400">
-        {data.Domains.Domain[0].ownerDetails.xmtp[0].isXMTPEnabled ? (
+      <div className=" w-full h-full bg-white overflow-hidden">
+        {/* {data.Domains.Domain[0].ownerDetails.xmtp[0].isXMTPEnabled ? (
           <p>Xmtp id : {data.Domains.Domain[0].ownerDetails.xmtp[0].id}</p>
         ) : (
           <p>you dont have any Xmtp ID </p>
         )}
 
-        <p>Dapp {data.Domains.Domain[0].dappName}</p>
-        <div className="flex justif">
-          {data.Domains.Domain[0].tokenNft.contentValue.image != null ? (
-            <img
-              className="rounded-full "
-              src={
-                data.Domains.Domain[0].tokenNft.contentValue.image.extraSmall
-              }
-              alt=""
-            />
-          ) : (
-            <Image
-              src={image}
-              alt=""
-              height={125}
-              width={125}
-              className="w-[125px] h-[125px] border rounded-full bg-white border-gray-300 transition-transform transform hover:scale-110"
-            />
-          )}
-          <AddressCopy address={userId} />
-        </div>
+        <p>Dapp {data.Domains.Domain[0].dappName}</p> */}
+        {/* <div className="flex"> */}
+        {data.Domains.Domain[0].tokenNft.contentValue.image != null ? (
+          <img
+            className="w-full h-full object-cover bg-red-700"
+            src={data.Domains.Domain[0].tokenNft.contentValue.image.extraSmall}
+            alt=""
+          />
+        ) : (
+          <Image
+            src={image}
+            alt=""
+            height={1250}
+            width={1250}
+            className="w-full h-full object-cover bg-red-700"
+          />
+        )}
+        {/* <AddressCopy address={userId} /> */}
+        {/* </div> */}
       </div>
     );
   }
