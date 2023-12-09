@@ -580,7 +580,7 @@
     uint8arraylist "^2.4.3"
     uint8arrays "^4.0.6"
 
-"@libp2p/peer-id@^3.0.0", "@libp2p/peer-id@^3.0.3", "@libp2p/peer-id@^3.0.6":
+"@libp2p/peer-id@^3.0.0", "@libp2p/peer-id@^3.0.2", "@libp2p/peer-id@^3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@libp2p/peer-id/-/peer-id-3.0.6.tgz#93b3f240488c0af3d76f64716e2ee032cd2fd2da"
   integrity sha512-iN1Ia5gH2U1V/GOVRmLHmVY6fblxzrOPUoZrMYjHl/K4s+AiI7ym/527WDeQvhQpD7j3TfDwcAYforD2dLGpLw==
@@ -3174,16 +3174,16 @@
     eventemitter3 "^4.0.7"
     zustand "^4.3.1"
 
-"@waku/core@0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@waku/core/-/core-0.0.25.tgz#da3a7e4f3de4444915de9b326f8499f0970019d0"
-  integrity sha512-YG6cRo82CaU92bf85hrN1s5FAtHlojaJ6I3pzOzRl7HAhhGVhQvfNgc1XHU1RiVkbw17ug8AapFPSy+A36gjvQ==
+"@waku/core@0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@waku/core/-/core-0.0.24.tgz#eb0fd03e5b8a5ac6fa718c27fb7dc3e86dafc7bd"
+  integrity sha512-k/5wtXipxJ48XI9mpMFBDH62f6BGl+AWuNVWkKkL0zgCltWIEQ/yXTkGWRcpmvdMOze+czx26VkLyfy2/ZKs/A==
   dependencies:
     "@noble/hashes" "^1.3.2"
-    "@waku/enr" "^0.0.19"
-    "@waku/interfaces" "0.0.20"
+    "@waku/enr" "^0.0.18"
+    "@waku/interfaces" "0.0.19"
     "@waku/proto" "0.0.5"
-    "@waku/utils" "0.0.13"
+    "@waku/utils" "0.0.12"
     debug "^4.3.4"
     it-all "^3.0.3"
     it-length-prefixed "^9.0.1"
@@ -3192,48 +3192,48 @@
     uint8arraylist "^2.4.3"
     uuid "^9.0.0"
 
-"@waku/dns-discovery@0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@waku/dns-discovery/-/dns-discovery-0.0.19.tgz#00713897d5555d666afd7c8b763dd16fceb5f999"
-  integrity sha512-K701xc+snE2NrvhORB7Wiyg4WXSGCjzE5LLCTeIaSzlB7eA1HbdU3wC57uiLdChqo495JPqMN/52TQ/m9nAwpQ==
+"@waku/dns-discovery@0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@waku/dns-discovery/-/dns-discovery-0.0.18.tgz#a8ddc86e5038f6f2e709db6f1f3b70bce0b4f74c"
+  integrity sha512-P9NEfxUPtc/2Hb5oLYZZRohOFDP4CDAGpLxQDVWSceM2j769M4eW3EtCdbpShwrGs1t9IsENIUCAWF8ukRm3rg==
   dependencies:
-    "@waku/enr" "0.0.19"
-    "@waku/utils" "0.0.13"
+    "@waku/enr" "0.0.18"
+    "@waku/utils" "0.0.12"
     debug "^4.3.4"
     dns-query "^0.11.2"
     hi-base32 "^0.5.1"
     uint8arrays "^4.0.4"
 
-"@waku/enr@0.0.19", "@waku/enr@^0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@waku/enr/-/enr-0.0.19.tgz#2f2c6ed5c657b7a00fa9524e260916f9d34a8dda"
-  integrity sha512-SomeHKk9kZwYoCNLqSB7SQ9ngnAIdKfQ0JACsc20azdhTxLYAQ6gWrrDFAmXnYwRKNAJfl8A28XThtWnGIiUpA==
+"@waku/enr@0.0.18", "@waku/enr@^0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@waku/enr/-/enr-0.0.18.tgz#0bc5412303cf8713c380c8410171cbbfb3297c78"
+  integrity sha512-yNCNwrW1nlvwPlSP3UPZwkjsfs7xn/Hdk9q+bdjVmpeEKHZW4M08VmfdOaX7iUqBDFpKmFgC6HmuWzL5Wh/9kQ==
   dependencies:
     "@ethersproject/rlp" "^5.7.0"
     "@libp2p/crypto" "^1.0.17"
-    "@libp2p/peer-id" "^3.0.3"
+    "@libp2p/peer-id" "^3.0.2"
     "@multiformats/multiaddr" "^12.0.0"
     "@noble/secp256k1" "^1.7.1"
-    "@waku/utils" "0.0.13"
+    "@waku/utils" "0.0.12"
     debug "^4.3.4"
     js-sha3 "^0.9.2"
 
-"@waku/interfaces@0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@waku/interfaces/-/interfaces-0.0.20.tgz#b029a3e57609c0cffa8c66a2471e16bda5d77398"
-  integrity sha512-6g2SRCKiAqtxElozXzPNHg68u/lxWSGL1LSXqwA0AAs+WYvK2vYfBM9ceUlbhDEk4ReCUAceUgZgdtdgKGflgA==
+"@waku/interfaces@0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@waku/interfaces/-/interfaces-0.0.19.tgz#fc9fd511b5cf3a9ba3fdcd863ca2dbac5db95b9c"
+  integrity sha512-l8ylagP/Q0h1l7+2wtt5aQ71N6Fbzgum7jMH5BgK+mQ7w+B3E1WakeCpeUK/BbHRmRKKtryWk0c2ySmHmA/6zA==
 
-"@waku/peer-exchange@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@waku/peer-exchange/-/peer-exchange-0.0.18.tgz#ce2599963dba1ef7d4639ab1310fa785380cfe58"
-  integrity sha512-oRXuASG62SxiVUYdJL7JJAHsa0yORuHHNg1oxL4apVgbnxDXY6SPcvGR1tgpBzMweryPzzx1IqMOZ9tusFCwyA==
+"@waku/peer-exchange@^0.0.17":
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/@waku/peer-exchange/-/peer-exchange-0.0.17.tgz#84a4a1a867d17094491ec544f42a71bee578d751"
+  integrity sha512-PcqSj0V8UoKk1CH8a7B1Rr2AbnscV0m7RZFUD1ZVCVwRy2PWhVG8wWQD9Cat1AlNh4L1MppnMEh2Y6ifpDkHsw==
   dependencies:
     "@libp2p/interfaces" "^3.3.2"
-    "@waku/core" "0.0.25"
-    "@waku/enr" "0.0.19"
-    "@waku/interfaces" "0.0.20"
+    "@waku/core" "0.0.24"
+    "@waku/enr" "0.0.18"
+    "@waku/interfaces" "0.0.19"
     "@waku/proto" "0.0.5"
-    "@waku/utils" "0.0.13"
+    "@waku/utils" "0.0.12"
     debug "^4.3.4"
     it-all "^3.0.3"
     it-length-prefixed "^9.0.1"
@@ -3251,41 +3251,41 @@
   resolved "https://registry.yarnpkg.com/@waku/react/-/react-0.0.5-63a782d.tgz#925a440b51954df544c83f7b44b22e28c0d10d90"
   integrity sha512-PAOxwKnRk8hOOiJCRh6GY3xyaIclNv5/ZJ50fRvv291zYSVYh9dnXdz2jpRjTsviCQFTamYn/xqc4+SjBITucQ==
 
-"@waku/relay@0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@waku/relay/-/relay-0.0.8.tgz#4ba9e6fe517fcd35960848de6e9836ef5ddfb0c2"
-  integrity sha512-H1DXlB7o6qo3dc+qtVFY8g8/jXlyYhSXEIiNU/4eHjCDt0fzl58JdT170QJMDuTQB8LswVzTMRUxFZM5/LTwXw==
+"@waku/relay@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@waku/relay/-/relay-0.0.7.tgz#5ab2c766dc4d67f80f765466de5f1761b10fd300"
+  integrity sha512-L1Pb7WDCkLXmc/NdUvdZp+xuj2J/mTi9oVPPpthsYVbYSWpNaM2imqeBhsAGHzaurYOge+gCWD7ie+wt0n8xeA==
   dependencies:
     "@chainsafe/libp2p-gossipsub" "^10.1.0"
     "@noble/hashes" "^1.3.2"
-    "@waku/core" "0.0.25"
-    "@waku/interfaces" "0.0.20"
+    "@waku/core" "0.0.24"
+    "@waku/interfaces" "0.0.19"
     "@waku/proto" "0.0.5"
-    "@waku/utils" "0.0.13"
+    "@waku/utils" "0.0.12"
     chai "^4.3.7"
     debug "^4.3.4"
     fast-check "^3.13.1"
 
-"@waku/sdk@^0.0.21":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/@waku/sdk/-/sdk-0.0.21.tgz#9addc317da7963c6b84df634f3d841a8ec4e0fb2"
-  integrity sha512-LKG4lGJryco9hHa5fS4GaZ1sDze6MoEeZWyRAmt4uN0UtarKWfzDzIUiifTH3x1vgpcV0mioQPCgeVy3z+acYg==
+"@waku/sdk@0.0.20":
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/@waku/sdk/-/sdk-0.0.20.tgz#5b30a475a7f74e13e7bf59a80e986ca36e5be32d"
+  integrity sha512-+Q1Ps58SRtyGWR3M6CeyVkm4LlkEMM/xcSuA8GSHTEbg3WioRWOWw4GnLlPV21lhKLcslQUBMYZpJx2Fh0lG7A==
   dependencies:
     "@chainsafe/libp2p-noise" "^13.0.0"
     "@libp2p/mplex" "^9.0.5"
     "@libp2p/websockets" "^7.0.5"
-    "@waku/core" "0.0.25"
-    "@waku/dns-discovery" "0.0.19"
-    "@waku/interfaces" "0.0.20"
-    "@waku/peer-exchange" "^0.0.18"
-    "@waku/relay" "0.0.8"
-    "@waku/utils" "0.0.13"
-    libp2p "^0.46.14"
+    "@waku/core" "0.0.24"
+    "@waku/dns-discovery" "0.0.18"
+    "@waku/interfaces" "0.0.19"
+    "@waku/peer-exchange" "^0.0.17"
+    "@waku/relay" "0.0.7"
+    "@waku/utils" "0.0.12"
+    libp2p "^0.46.12"
 
-"@waku/utils@0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@waku/utils/-/utils-0.0.13.tgz#e91f02d77ca7d64695677300b660fdabb4d51c91"
-  integrity sha512-sGZRJyYr7+QZpV2tlGJF48gKmwNdFha6rPKPgXiKDsz2YMhPlg70ffbGcND3bEfOwWmX4g/x5i3Oqwwl+HzwJw==
+"@waku/utils@0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@waku/utils/-/utils-0.0.12.tgz#118bfbb443c20d724d4880297c3d8b8a9d4718e7"
+  integrity sha512-98+lz65HTk+QxvP5aCxSfN2gTr5GSaxablnrNNueeIci9fEB0aVS82B2oBuhb8W4obLDunXdjyeuD6S4I7Q+uA==
   dependencies:
     chai "^4.3.8"
     debug "^4.3.4"
@@ -6185,7 +6185,7 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-libp2p@^0.46.14:
+libp2p@^0.46.12:
   version "0.46.21"
   resolved "https://registry.yarnpkg.com/libp2p/-/libp2p-0.46.21.tgz#721c885782191cc0bc167adbd38638194963f3f9"
   integrity sha512-p/3vCpw+ciizhlBofpzuez+4Fs8EeVFaVQZUQPwnQwycuOFcWLBhcqkOtv4KlqImFKOk+9TuyW1Xofjmr/wPnA==

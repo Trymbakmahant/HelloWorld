@@ -4,10 +4,12 @@ import { useWaku } from "@waku/react";
 import { createEncoder, createDecoder, Decoder, WakuNode } from "@waku/sdk";
 import protobuf from "protobufjs";
 import { useLightPush, useFilterMessages } from "@waku/react";
-
-import "./page.css";
-
+import { useAccount } from "wagmi";
+import { Input } from "@nextui-org/react";
+import GroupList from "./GroupList/page";
+import { IoIosSend } from "react-icons/io";
 function Waku() {
+  const { address } = useAccount();
   const [inputMessage, setInputMessage] = useState("");
   const [messages, setMessages] = useState<any>([]);
   const contentTopic = "/waku-react-guide/1/chat/proto";
@@ -40,64 +42,77 @@ function Waku() {
     setInputMessage(e.target.value);
   };
 
-  // Create and start a Light Node
-
-  // Create a message encoder and decoder
-
-  // Create a message structure using Protobuf
   const ChatMessage = new protobuf.Type("ChatMessage")
     .add(new protobuf.Field("timestamp", 1, "uint64"))
-    .add(new protobuf.Field("message", 2, "string"));
-
+    .add(new protobuf.Field("sender", 2, "string"))
+    .add(new protobuf.Field("message", 3, "string"));
   const { push } = useLightPush({ node, encoder });
   console.log(messages);
   // Send the message using Light Push
   const sendMessage = async () => {
-    if (!push || inputMessage.length === 0) return;
+    try {
+      if (!push || inputMessage.length === 0) return;
 
-    // Create a new message object
-    const timestamp = Date.now();
-    const protoMessage = ChatMessage.create({
-      timestamp: timestamp,
-      message: inputMessage,
-    });
-    const myDate = new Date(timestamp);
-    // Serialise the message and push to the network
-    const payload = ChatMessage.encode(protoMessage).finish();
-    const { recipients, errors } = await push({ payload, timestamp: myDate });
-
-    // Check for errors
-    if (errors?.length === 0) {
-      setInputMessage("");
-      console.log("MESSAGE PUSHED");
-    } else {
-      console.log(errors);
+      // Create a new message object
+      const timestamp = Date.now();
+      const protoMessage = ChatMessage.create({
+        timestamp: timestamp,
+        sender: address,
+        message: inputMessage,
+      });
+      const myDate = new Date(timestamp);
+      // Serialise the message and push to the network
+      const payload = ChatMessage.encode(protoMessage).finish();
+      console.log(push);
+      const { recipients, errors } = await push({ payload, timestamp: myDate });
+      console.log(recipients);
+      // Check for errors
+      if (errors?.length === 0) {
+        setInputMessage("");
+        console.log("MESSAGE PUSHED");
+      } else {
+        console.log(errors);
+      }
+    } catch (e) {
+      console.log(e);
     }
   };
 
   return (
     <>
-      <div className="chat-interface">
-        <h1>Waku React Demo</h1>
-        <div className="chat-body">
-          {messages.map((message: any, index: any) => (
-            <div key={index} className="chat-message">
-              <span>{new Date(message.timestamp).toUTCString()}</span>
-              <div className="message-text">{message.message}</div>
+      <div className="absolute w-full h-full">
+        {" "}
+        <div className="border-solid flex flex-row border-2 border-blue-500 w-full h-[100vh]">
+          <div className="w-[400px] border-solid border-blue-500 border-2 h-full">
+            <GroupList />
+          </div>
+          <div className="border-solid flex justify-end flex-col w-full border-blue-500 border-2 h-full">
+            <div className="flex flex-grow-1 flex-col overflow-y-auto p-[10px]">
+              {messages.map((message: any, index: any) => (
+                <div key={index} className="chat-message">
+                  <span>{`by  ${message.sender}`}</span>
+                  <div className=" text-white text-lg font-bold p-2 mt-2">
+                    {message.message}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="chat-footer">
-          <input
-            type="text"
-            id="message-input"
-            value={inputMessage}
-            onChange={handleInputChange}
-            placeholder="Type your message..."
-          />
-          <button className="send-button" onClick={sendMessage}>
-            Send
-          </button>
+            <div className="flex gap-2 w-[80%] pb-2 flex-row">
+              <Input
+                type="text"
+                className="flex flex-grow-1 rounded-3"
+                value={inputMessage}
+                onChange={handleInputChange}
+                placeholder="Type your message..."
+              />
+              <button
+                className="text-4xl p-1 rounded-2xl border-2 border-solid border-blue-400"
+                onClick={sendMessage}
+              >
+                🚀
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>
