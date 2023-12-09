@@ -21,6 +21,7 @@ import {
   connectorsForWallets,
   Locale,
 } from "@rainbow-me/rainbowkit";
+import { HuddleProv } from "./providers/HuddleProvider";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { polygon } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
@@ -67,6 +68,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
   React.useEffect(() => setMounted(true), []);
   return (
     <WagmiConfig config={wagmiConfig}>
+      <HuddleProv>
       <RainbowKitProvider chains={chains} appInfo={demoAppInfo}>
         <NextUIProvider>
           <LightNodeProvider
@@ -85,6 +87,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
           </LightNodeProvider>
         </NextUIProvider>
       </RainbowKitProvider>
+      </HuddleProv>
     </WagmiConfig>
   );
 }
