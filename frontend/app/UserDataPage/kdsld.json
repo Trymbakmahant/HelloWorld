@@ -1,0 +1,127 @@
+// {
+//   "data": {
+//     "Domains": {
+//       "Domain": [
+//         {
+//           "tokenNft": {
+//             "contentValue": {
+//               "image": {
+//                 "`extraSmall`": "https://assets.airstack.xyz/image/nft/nNBFvZ6wvuIHqDzTFi5pM/pM0Q1IAUgJRNTJrw7f4s3msKuOthSDfoAV6MR5Ue/EiPbgVeU3k+Cvz8sVZWCzXs4SBrIQIAUkye/EmeyMSxWG6wPc0VufPWGCZpP7bR7XGa9jXJgSZ032qABqGFbsvRt6dukJ42iQpcEUa6WVPeM=/extra_small.svg",
+//                 "small": "https://assets.airstack.xyz/image/nft/nNBFvZ6wvuIHqDzTFi5pM/pM0Q1IAUgJRNTJrw7f4s3msKuOthSDfoAV6MR5Ue/EiPbgVeU3k+Cvz8sVZWCzXs4SBrIQIAUkye/EmeyMSxWG6wPc0VufPWGCZpP7bR7XGa9jXJgSZ032qABqGFbsvRt6dukJ42iQpcEUa6WVPeM=/small.svg",
+//                 "medium": "https://assets.airstack.xyz/image/nft/nNBFvZ6wvuIHqDzTFi5pM/pM0Q1IAUgJRNTJrw7f4s3msKuOthSDfoAV6MR5Ue/EiPbgVeU3k+Cvz8sVZWCzXs4SBrIQIAUkye/EmeyMSxWG6wPc0VufPWGCZpP7bR7XGa9jXJgSZ032qABqGFbsvRt6dukJ42iQpcEUa6WVPeM=/medium.svg",
+//                 "large": "https://assets.airstack.xyz/image/nft/nNBFvZ6wvuIHqDzTFi5pM/pM0Q1IAUgJRNTJrw7f4s3msKuOthSDfoAV6MR5Ue/EiPbgVeU3k+Cvz8sVZWCzXs4SBrIQIAUkye/EmeyMSxWG6wPc0VufPWGCZpP7bR7XGa9jXJgSZ032qABqGFbsvRt6dukJ42iQpcEUa6WVPeM=/large.svg",
+//                 "original": "https://assets.airstack.xyz/image/nft/nNBFvZ6wvuIHqDzTFi5pM/pM0Q1IAUgJRNTJrw7f4s3msKuOthSDfoAV6MR5Ue/EiPbgVeU3k+Cvz8sVZWCzXs4SBrIQIAUkye/EmeyMSxWG6wPc0VufPWGCZpP7bR7XGa9jXJgSZ032qABqGFbsvRt6dukJ42iQpcEUa6WVPeM=/original_image.svg"
+//               },
+//               "video": null
+//             },
+//             "erc6551Accounts": []
+//           },
+//           "dappName": "ens",
+//           "ownerDetails": {
+//             "addresses": ["0xd8da6bf26964af9d7eed9e03e53415d37aa96045"],
+//             "xmtp": [
+//               {
+//                 "id": "9b95cd544b48ab401f0ec3d73d5e8e08",
+//                 "isXMTPEnabled": true
+//               }
+//             ]
+//           },
+//           "subDomainCount": 1
+//         }
+//       ]
+//     }
+//   }
+// }
+
+
+// {
+//   "data": {
+//     "Ethereum": {
+//       "TokenBalance": [
+//         {
+//           "owner": {
+//             "identity": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+//           },
+//           "amount": "1",
+//           "tokenAddress": "0xe361f10965542ee57d39043c9c3972b77841f581",
+//           "tokenId": "2575",
+//           "tokenType": "ERC721",
+//           "tokenNfts": {
+//             "contentValue": {
+//               "image": {
+//                 "extraSmall": "https://assets.airstack.xyz/image/nft/8f58Hf72fwHyRNcwwg4qm1s1lnMMqcTNPtigmujnbqExq9Wt5XW0JEqPWZQdV3hICnCYr250gkuHMB5a9H+nUw==/extra_small.png",
+//                 "small": "https://assets.airstack.xyz/image/nft/8f58Hf72fwHyRNcwwg4qm1s1lnMMqcTNPtigmujnbqExq9Wt5XW0JEqPWZQdV3hICnCYr250gkuHMB5a9H+nUw==/small.png",
+//                 "medium": "https://assets.airstack.xyz/image/nft/8f58Hf72fwHyRNcwwg4qm1s1lnMMqcTNPtigmujnbqExq9Wt5XW0JEqPWZQdV3hICnCYr250gkuHMB5a9H+nUw==/medium.png",
+//                 "large": "https://assets.airstack.xyz/image/nft/8f58Hf72fwHyRNcwwg4qm1s1lnMMqcTNPtigmujnbqExq9Wt5XW0JEqPWZQdV3hICnCYr250gkuHMB5a9H+nUw==/large.png",
+//                 "original": "https://assets.airstack.xyz/image/nft/8f58Hf72fwHyRNcwwg4qm1s1lnMMqcTNPtigmujnbqExq9Wt5XW0JEqPWZQdV3hICnCYr250gkuHMB5a9H+nUw==/original_image.png"
+//               }
+//             }
+//           }
+//         }
+//         // Other Ethereum NFTs held by vitalik
+//       ],
+//       "pageInfo": {
+//         "nextCursor": "eyJMYXN0VmFsdWVzTWFwIjp7Il9pZCI6eyJWYWx1ZSI6IjEweDM0M2Y5OTllYWFjZGZhMWYyMDFmYjhlNDNlYmIzNWM5OWQ5YWUwYzEweGQ4ZGE2YmYyNjk2NGFmOWQ3ZWVkOWUwM2U1MzQxNWQzN2FhOTYwNDU1NTM4IiwiRGF0YVR5cGUiOiJzdHJpbmcifSwibGFzdFVwZGF0ZWRUaW1lc3RhbXAiOnsiVmFsdWUiOiIxNjk0NTc4MjgzIiwiRGF0YVR5cGUiOiJEYXRlVGltZSJ9fSwiUGFnaW5hdGlvbkRpcmVjdGlvbiI6Ik5FWFQifQ==",
+//         "prevCursor": ""
+//       }
+//     },
+//     "Polygon": {
+//       "TokenBalance": [
+//         {
+//           "owner": {
+//             "identity": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+//           },
+//           "amount": "1",
+//           "tokenAddress": "0xfc4c0a71f7eaa1c8cd4044b8a4808ab1c2dca103",
+//           "tokenId": "14",
+//           "tokenType": "ERC721",
+//           "tokenNfts": {
+//             "contentValue": {
+//               "image": {
+//                 "extraSmall": "https://assets.airstack.xyz/image/nft/DXquuKVBgT0LZ59D3CvMbxW/Wgj+tOv6HxthIsOD94xJiicCTCtBPjgSY5DLpx9zdpHltoXSCqKIg9yEjZZE4Q==/extra_small.png",
+//                 "small": "https://assets.airstack.xyz/image/nft/DXquuKVBgT0LZ59D3CvMbxW/Wgj+tOv6HxthIsOD94xJiicCTCtBPjgSY5DLpx9zdpHltoXSCqKIg9yEjZZE4Q==/small.png",
+//                 "medium": "https://assets.airstack.xyz/image/nft/DXquuKVBgT0LZ59D3CvMbxW/Wgj+tOv6HxthIsOD94xJiicCTCtBPjgSY5DLpx9zdpHltoXSCqKIg9yEjZZE4Q==/medium.png",
+//                 "large": "https://assets.airstack.xyz/image/nft/DXquuKVBgT0LZ59D3CvMbxW/Wgj+tOv6HxthIsOD94xJiicCTCtBPjgSY5DLpx9zdpHltoXSCqKIg9yEjZZE4Q==/large.png",
+//                 "original": "https://assets.airstack.xyz/image/nft/DXquuKVBgT0LZ59D3CvMbxW/Wgj+tOv6HxthIsOD94xJiicCTCtBPjgSY5DLpx9zdpHltoXSCqKIg9yEjZZE4Q==/original_image.png"
+//               }
+//             }
+//           }
+//         }
+//         // Other Polygon NFTs held by vitalik
+//       ],
+//       "pageInfo": {
+//         "nextCursor": "eyJMYXN0VmFsdWVzTWFwIjp7Il9pZCI6eyJWYWx1ZSI6ImMzMjllODM2ZWE0MzU2ZGViZWU1ZDc3MTg5MjlhNWRiYWJkZjhjNGEwYjJmMDY2M2Y1NmQxOTU2YzlkNzViNWYiLCJEYXRhVHlwZSI6InN0cmluZyJ9LCJsYXN0VXBkYXRlZFRpbWVzdGFtcCI6eyJWYWx1ZSI6IjE2OTg5ODA2MjIiLCJEYXRhVHlwZSI6IkRhdGVUaW1lIn19LCJQYWdpbmF0aW9uRGlyZWN0aW9uIjoiTkVYVCJ9",
+//         "prevCursor": ""
+//       }
+//     },
+//     "Base": {
+//       "TokenBalance": [
+//         {
+//           "owner": {
+//             "identity": "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
+//           },
+//           "amount": "1",
+//           "tokenAddress": "0xab54b8bd1118d535beecf43bf9c7d163879cf967",
+//           "tokenId": "2",
+//           "tokenType": "ERC1155",
+//           "tokenNfts": {
+//             "contentValue": {
+//               "image": {
+//                 "extraSmall": "https://assets.airstack.xyz/image/nft/8453/KEYM3ihZQ1f7hNMrnxylaC9aymzRDEpR6k24WvE1bOeYTCP3FBEY8v0XMCaJUXyzqno4Vvx93EOQrbiH+i4aKQ==/extra_small.jpg",
+//                 "small": "https://assets.airstack.xyz/image/nft/8453/KEYM3ihZQ1f7hNMrnxylaC9aymzRDEpR6k24WvE1bOeYTCP3FBEY8v0XMCaJUXyzqno4Vvx93EOQrbiH+i4aKQ==/small.jpg",
+//                 "medium": "https://assets.airstack.xyz/image/nft/8453/KEYM3ihZQ1f7hNMrnxylaC9aymzRDEpR6k24WvE1bOeYTCP3FBEY8v0XMCaJUXyzqno4Vvx93EOQrbiH+i4aKQ==/medium.jpg",
+//                 "large": "https://assets.airstack.xyz/image/nft/8453/KEYM3ihZQ1f7hNMrnxylaC9aymzRDEpR6k24WvE1bOeYTCP3FBEY8v0XMCaJUXyzqno4Vvx93EOQrbiH+i4aKQ==/large.jpg",
+//                 "original": "https://assets.airstack.xyz/image/nft/8453/KEYM3ihZQ1f7hNMrnxylaC9aymzRDEpR6k24WvE1bOeYTCP3FBEY8v0XMCaJUXyzqno4Vvx93EOQrbiH+i4aKQ==/original_image.jpg"
+//               }
+//             }
+//           }
+//         }
+//         // Other Base NFTs held by vitalik
+//       ],
+//       "pageInfo": {
+//         "nextCursor": "eyJMYXN0VmFsdWVzTWFwIjp7Il9pZCI6eyJWYWx1ZSI6ImMzMjllODM2ZWE0MzU2ZGViZWU1ZDc3MTg5MjlhNWRiYWJkZjhjNGEwYjJmMDY2M2Y1NmQxOTU2YzlkNzViNWYiLCJEYXRhVHlwZSI6InN0cmluZyJ9LCJsYXN0VXBkYXRlZFRpbWVzdGFtcCI6eyJWYWx1ZSI6IjE2OTg5ODA2MjIiLCJEYXRhVHlwZSI6IkRhdGVUaW1lIn19LCJQYWdpbmF0aW9uRGlyZWN0aW9uIjoiTkVYVCJ9",
+//         "prevCursor": ""
+//       }
+//     }
+//   }
+// }

@@ -4,8 +4,11 @@ import React from "react";
 import { ThemeProvider } from "./providers/nexttheme";
 import "@rainbow-me/rainbowkit/styles.css";
 import "@rainbow-me/rainbowkit/styles.css";
-import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
+
+import { LightNodeProvider, ContentPairProvider } from "@waku/react";
+import { Protocols } from "@waku/interfaces";
+// Set the Light Node options
+const NODE_OPTIONS = { defaultBootstrap: true };
 
 import {
   argentWallet,
@@ -59,15 +62,27 @@ const wagmiConfig = createConfig({
 });
 
 export default function Provider({ children }: { children: React.ReactNode }) {
+  const CONTENT_TOPIC = "/toy-chat/2/huilong/proto";
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => setMounted(true), []);
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains} appInfo={demoAppInfo}>
         <NextUIProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {mounted && children}
-          </ThemeProvider>
+          <LightNodeProvider
+            options={{ defaultBootstrap: true }}
+            protocols={[Protocols.Store, Protocols.Filter, Protocols.LightPush]}
+          >
+            <ContentPairProvider contentTopic={CONTENT_TOPIC}>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+              >
+                {mounted && children}
+              </ThemeProvider>
+            </ContentPairProvider>
+          </LightNodeProvider>
         </NextUIProvider>
       </RainbowKitProvider>
     </WagmiConfig>
