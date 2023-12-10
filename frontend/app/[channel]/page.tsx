@@ -7,11 +7,14 @@ import Link from "next/link";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useLightPush, useFilterMessages } from "@waku/react";
 import { useAccount } from "wagmi";
+import { useMyContext } from "../context/Appcontext";
 import { Button, Input, button } from "@nextui-org/react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import GroupList from "@/app/Waku/GroupList/page";
 function Waku() {
+  const { Name } = useMyContext();
   const { channel } = useParams();
+  const route = useRouter();
   const { address } = useAccount();
   const [inputMessage, setInputMessage] = useState("");
   const [messages, setMessages] = useState<any>([]);
@@ -73,6 +76,7 @@ function Waku() {
       console.log(push);
       const { recipients, errors } = await push({ payload, timestamp: myDate });
       console.log(recipients);
+      route.push(`./Meet/${Name}`);
       // Check for errors
       if (errors?.length === 0) {
         setInputMessage("");
@@ -129,7 +133,9 @@ function Waku() {
                     {message.message}
                   </div>
 
-                  {message.video === "yes" && <Button>Join video call </Button>}
+                  {message.video === "yes" && (
+                    <Link href={`./Meet/${Name}`}>Join video call </Link>
+                  )}
                 </div>
               ))}
             </div>

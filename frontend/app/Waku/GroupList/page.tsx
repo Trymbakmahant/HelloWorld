@@ -39,16 +39,14 @@ const page = () => {
               <div
                 key={index}
                 onClick={() => {
-                  setName(item.data.name);
+                  setName(item.data.roomid);
                 }}
                 className="cursor-pointer"
               >
-                <Link
-                  href={`./${item.data.name}`}
-                  className="border-solid border-2 rounded-lg border-blue-400 text-2xl font-bold  p-3"
-                >
-                  {item.data.name}
-                </Link>
+                <div className="border-solid border-2 rounded-lg border-blue-400 text-2xl font-bold  p-3">
+                  {" "}
+                  <Link href={`./${item.data.name}`}>{item.data.name}</Link>
+                </div>
                 {/* <div className="border-solid border-2 rounded-lg border-blue-400 text-2xl font-bold  p-3">
                   {item.data.name}
                 </div> */}
