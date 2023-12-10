@@ -8,6 +8,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useLightPush, useFilterMessages } from "@waku/react";
 import { useAccount } from "wagmi";
 import { Button, Input, button } from "@nextui-org/react";
+import GroupList from "@/app/Waku/GroupList/page";
 
 import { useMyContext } from "../context/Appcontext";
 function Waku() {
@@ -118,8 +119,9 @@ function Waku() {
 
   return (
     <>
+      <GroupList />
       {address ? (
-        <div className="absolute w-full h-full">
+        <div className="absolute justify-center w-full h-full">
           <div className="border-solid flex justify-end flex-col w-full border-blue-500 border-2 h-full">
             <div className="flex flex-grow-1 flex-col overflow-y-auto p-[10px]">
               {messages.map((message: any, index: any) => (
@@ -135,7 +137,7 @@ function Waku() {
                 </div>
               ))}
             </div>
-            <div className="flex gap-2 w-[80%] pb-2 flex-row">
+            <div className="flex gap-2 w-[80%]   pb-2 flex-row">
               <Input
                 type="text"
                 className="flex flex-grow-1 rounded-3"

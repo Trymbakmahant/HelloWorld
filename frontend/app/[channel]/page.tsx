@@ -121,9 +121,13 @@ function Waku() {
   return (
     <>
       {address ? (
-        <div className="absolute w-full h-full">
-          <div className="border-solid flex justify-end flex-col w-full border-blue-500 border-2 h-full">
-            <div className="flex flex-grow-1 flex-col overflow-y-auto p-[10px]">
+        <div className="flex flex-row">
+          <div className="w-[400px]">
+            <GroupList />
+          </div>
+
+          <div className="border-solid flex justify-end  items-start pl-4 flex-col w-full border-blue-500 border-2 h-[100vh]">
+            <div className="flex flex-grow-1 flex-col items-start overflow-y-auto p-[10px]">
               {messages.map((message: any, index: any) => (
                 <div key={index} className="chat-message">
                   <Link
@@ -134,7 +138,12 @@ function Waku() {
                   </div>
 
                   {message.video === "yes" && (
-                    <Link href={`./Meet/${Name}`}>Join video call </Link>
+                    <Link
+                      href={`./Meet/${Name}`}
+                      className="border-solid border-2 border-white p-3 bg-green-400"
+                    >
+                      Join video call{" "}
+                    </Link>
                   )}
                 </div>
               ))}
