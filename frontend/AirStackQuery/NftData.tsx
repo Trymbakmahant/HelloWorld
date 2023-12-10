@@ -142,27 +142,29 @@ function FollowerData({ userID }: { userID: string }) {
   }`);
 
   if (data) {
+    console.log(data);
     return (
       <div>
-        {data.Ethereum.TokenBalance.map(
-          (item: any, index: Key | null | undefined) => {
-            return (
-              <div
-                key={index}
-                className="border-solid border-2 border-sky-500 m-3 p-3"
-              >
-                <p> token type = {item.tokenType}</p>
-                <p> token address = {item.tokenAddress}</p>
+        {data &&
+          data.Ethereum.TokenBalance.map(
+            (item: any, index: Key | null | undefined) => {
+              return (
+                <div
+                  key={index}
+                  className="border-solid border-2 border-sky-500 m-3 p-3"
+                >
+                  <p> token type = {item.tokenType}</p>
+                  <p> token address = {item.tokenAddress}</p>
 
-                {item.tokenNfts.contentValue.image != null ? (
-                  <img src={item.tokenNfts.contentValue.image.small} />
-                ) : (
-                  <div>Sorry This token dose not have any Image</div>
-                )}
-              </div>
-            );
-          }
-        )}
+                  {item.tokenNfts.contentValue.image != null ? (
+                    <img src={item.tokenNfts.contentValue.image.small} />
+                  ) : (
+                    <div>Sorry This token dose not have any Image</div>
+                  )}
+                </div>
+              );
+            }
+          )}
       </div>
     );
   }

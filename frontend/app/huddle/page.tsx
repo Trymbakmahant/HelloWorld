@@ -13,8 +13,8 @@ import { AccessToken, Role } from "@huddle01/server-sdk/auth";
 import AcceptPeer from "./acceptPeer";
 const Huddle = () => {
   const { stream, enableVideo, disableVideo, isVideoOn } = useLocalVideo();
-  const { enableAudio, disableAudio } = useLocalAudio();
-  const [roomid, setRoomId] = useState<string>("tlw-hxeo-vdc");
+  const { stream: audioStream, enableAudio, disableAudio } = useLocalAudio();
+  const [roomid, setRoomId] = useState<string>("lgr-shul-chz");
   const [token, settoken] = useState<string>("");
   //
   const { joinRoom, leaveRoom } = useRoom({

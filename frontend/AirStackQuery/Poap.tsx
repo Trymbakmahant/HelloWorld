@@ -1,22 +1,13 @@
 "use client";
 
 import { init, useQuery } from "@airstack/airstack-react";
-import { userPoap } from "@/graphql/userPoap";
-import { Variable } from "lucide-react";
-import {
-  ReactElement,
-  JSXElementConstructor,
-  ReactNode,
-  ReactPortal,
-  PromiseLikeOfReactNode,
-  Key,
-} from "react";
 
 init("1e8cf76e011624533995cae03c7cf2299");
 
 // Replace with GraphQL Query
 
 function FollowerData({ userID }: { userID: string }) {
+  console.log(userID);
   const { data, loading, error } = useQuery(`query MyQuery {
     Poaps(
       input: {
@@ -55,7 +46,7 @@ function FollowerData({ userID }: { userID: string }) {
   };
 
   if (data) {
-    console.log(data.Poaps.Poap);
+    console.log(data);
     return (
       <div className="flex-wrap flex">
         {data.Poaps.Poap.map((item: any, index: number) => {
