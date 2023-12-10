@@ -146,6 +146,7 @@ function FollowerData({ userID }: { userID: string }) {
     return (
       <div>
         {data &&
+          data.Ethereum.TokenBalance != null &&
           data.Ethereum.TokenBalance.map(
             (item: any, index: Key | null | undefined) => {
               return (

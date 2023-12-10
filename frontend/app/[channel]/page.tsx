@@ -156,18 +156,18 @@ function Waku() {
                 onChange={handleInputChange}
                 placeholder="Type your message..."
               />
-              <button
-                className="text-4xl p-1 rounded-2xl border-2 border-solid border-blue-400"
+              <Button
+                className="text-xl p-1 rounded-2xl border-2 border-solid border-blue-400"
                 onClick={sendMessage}
               >
                 🚀
-              </button>
-              <button
-                className="text-4xl p-1 rounded-2xl border-2 border-solid border-blue-400"
+              </Button>
+              <Button
+                className="text-xl p-1 rounded-2xl border-2 border-solid border-blue-400"
                 onClick={videoCall}
               >
                 Video Call
-              </button>
+              </Button>
             </div>
           </div>
         </div>

@@ -124,50 +124,12 @@ function Waku() {
             <div className="w-[400px] border-solid border-blue-500 border-2 ">
               <GroupList />
             </div>
-            <div className="border-solid flex justify-end flex-col w-full border-blue-500 border-2 h-full">
-              <div className="flex flex-grow-1 flex-col overflow-y-auto p-[10px]">
-                {messages.map((message: any, index: any) => (
-                  <div key={index} className="chat-message">
-                    <Link
-                      href={`/UserDataPage/${message.sender}`}
-                    >{`by  ${message.sender}`}</Link>
-                    <div className=" text-white text-lg font-bold p-2 mt-2">
-                      {message.message}
-                    </div>
-
-                    {message.video === "yes" && (
-                      <Button>Join video call </Button>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-2 w-[80%] pb-2 flex-row">
-                <Input
-                  type="text"
-                  className="flex flex-grow-1 rounded-3"
-                  value={inputMessage}
-                  onChange={handleInputChange}
-                  placeholder="Type your message..."
-                />
-                <button
-                  className="text-4xl p-1 rounded-2xl border-2 border-solid border-blue-400"
-                  onClick={sendMessage}
-                >
-                  🚀
-                </button>
-                <button
-                  className="text-4xl p-1 rounded-2xl border-2 border-solid border-blue-400"
-                  onClick={videoCall}
-                >
-                  Video Call
-                </button>
-              </div>
-            </div>
+            join any chat least that you want ❤️
           </div>
         </div>
       ) : (
         <div className="flex  items-center flex-col">
-          <p className="text-2xl text-blue-400">
+          <p className="text-2xl text-blue-400  justify-center mt-10">
             Please Connect wallet before continue
           </p>
           <ConnectButton />
